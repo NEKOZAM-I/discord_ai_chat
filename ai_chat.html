@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat - DiscordAI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-content">
+                <a class="logo-link" href="index.html">
+                    <div class="logo-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <span class="logo-text">DiscordAI</span>
+                </a>
+                <div class="nav-links">
+                    <a class="nav-link" href="home.html">Home</a>
+                    <a href="chat.html" class="nav-link active">AI Chat</a>
+                    <a href="index.html#features" class="nav-link">Features</a>
+                    <a href="index.html#support" class="nav-link">Support</a>
+                </div>
+                <div class="nav-buttons">
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-user-circle"></i>
+                        Profile
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="chat-wrapper">
+        <aside class="chat-sidebar" id="chatSidebar">
+            <div class="chat-sidebar-header">
+                <h2>Conversations</h2>
+                <button class="new-chat-btn" onclick="startNewChat()">
+                    <i class="fas fa-plus"></i>
+                    New Chat
+                </button>
+            </div>
+            <div class="chat-history">
+                <div class="chat-history-item active">
+                    <i class="fas fa-comment"></i>
+                    <span>Discord Server Setup</span>
+                </div>
+                <div class="chat-history-item">
+                    <i class="fas fa-comment"></i>
+                    <span>Moderation Rules</span>
+                </div>
+                <div class="chat-history-item">
+                    <i class="fas fa-comment"></i>
+                    <span>Bot Commands Help</span>
+                </div>
+                <div class="chat-history-item">
+                    <i class="fas fa-comment"></i>
+                    <span>Channel Organization</span>
+                </div>
+                <div class="chat-history-item">
+                    <i class="fas fa-comment"></i>
+                    <span>Role Permissions</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="chat-main">
+            <div class="chat-header">
+                <div>
+                    <h1>AI Assistant</h1>
+                    <p>Ask me anything about Discord server management</p>
+                </div>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-empty-state" id="emptyState">
+                    <div class="chat-empty-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h2 class="chat-empty-title">Welcome to DiscordAI Chat</h2>
+                    <p class="chat-empty-text">
+                        Start a conversation with our AI assistant to get help with your Discord server management, 
+                        moderation, and community building.
+                    </p>
+                    <div class="chat-suggestions">
+                        <div class="suggestion-card" onclick="sendSuggestion(this)">
+                            <i class="fas fa-server"></i>
+                            <h3>Server Setup</h3>
+                            <p>Help me set up a new Discord server for my gaming community</p>
+                        </div>
+                        <div class="suggestion-card" onclick="sendSuggestion(this)">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Moderation</h3>
+                            <p>What are the best practices for moderating a large server?</p>
+                        </div>
+                        <div class="suggestion-card" onclick="sendSuggestion(this)">
+                            <i class="fas fa-users"></i>
+                            <h3>Engagement</h3>
+                            <p>How can I increase member engagement in my Discord server?</p>
+                        </div>
+                        <div class="suggestion-card" onclick="sendSuggestion(this)">
+                            <i class="fas fa-cogs"></i>
+                            <h3>Custom Setup</h3>
+                            <p>Tailor your server layout with AI that adapts to your community’s needs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
